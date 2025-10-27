@@ -1,75 +1,77 @@
-/* Minimal mobile-only layout styled to match the screenshot */
+/* Mobile-first look tuned to the screenshot */
 :root{
-  --bg:#e8e2d2;
-  --fg:#1f1b16;
-  --muted:#4a3f2f;
-  --card:#e6decc;
-  --line:#b8ad97;
-  --accent:#f28a17;
+  --bg:#e7dfcf;
+  --fg:#1e1a14;
+  --muted:#6a5b45;
+  --card:#ebe2d0;
+  --line:#c9bca5;
+  --accent:#f6921d;
+  --pill:#c8b796;
+  --pill-border:#b19f7d;
 }
 *{box-sizing:border-box}
 html,body{height:100%}
 body{
   margin:0;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, 'Inter', Arial, sans-serif;
-  background: var(--bg);
-  color: var(--fg);
+  background:var(--bg);
+  color:var(--fg);
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Inter, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
-/* Simulated phone canvas to match mobile look even on desktop */
-.phone{
-  min-height:100dvh;
-  max-width:430px;
-  margin:0 auto;
-  padding:12px 12px 24px;
-}
+.phone{min-height:100dvh;max-width:480px;margin:0 auto;padding:10px 14px 28px}
 
 .topbar{
-  display:flex; align-items:center; justify-content:space-between;
-  padding:8px 4px 12px;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:6px 2px 12px;
 }
-.brand{font-weight:800; font-size:22px; letter-spacing:.3px}
+.brand{font-weight:900;font-size:26px;letter-spacing:.2px}
 .brand .plus{color:var(--accent)}
-.menu{width:36px;height:36px;border:none;background:transparent;padding:0;display:grid;gap:4px}
-.menu span{display:block;height:2px;background:var(--fg);border-radius:2px}
+.menu{width:44px;height:44px;border:none;background:transparent;padding:8px;border-radius:10px}
+.menu span{display:block;height:2px;background:var(--fg);border-radius:2px;margin:4px 0}
 
 .card{
   background:var(--card);
   border:1px solid var(--line);
-  border-radius:14px;
-  padding:14px;
+  border-radius:16px;
+  padding:16px;
   box-shadow: 0 1px 0 rgba(0,0,0,.05) inset;
 }
+.primary{margin-top:2px}
+.title-row{display:flex;gap:8px;align-items:flex-start}
+h1{font-size:26px;line-height:1.05;margin:2px 0 10px;font-weight:900}
+/* shield placeholder box (right) */
+.shield{margin-left:auto;width:28px;height:28px;border-radius:6px;
+  background:linear-gradient(180deg,#eee, #c9c9c9);
+  border:1px solid #aaa; box-shadow:inset 0 1px 0 rgba(255,255,255,.6);
+}
 
-.primary{ margin-top:4px; }
-.title-row{ display:flex; align-items:flex-start; gap:8px; }
-h1{font-size:24px; line-height:1.05; margin:0 0 6px; font-weight:800}
-.shield{ margin-left:auto; font-size:22px }
-
-.kv{ display:grid; grid-template-columns: 1fr auto; gap:6px 14px; margin:8px 0; }
-.k{ color: var(--muted); font-size:13px }
-.v{ font-size:14px }
+.kv{display:grid;grid-template-columns: 1fr auto;gap:6px 18px;margin:10px 2px}
+.k{color:var(--muted);font-size:14px}
+.v{font-size:15px;min-width:120px;text-align:right}
+.v-strong{font-weight:800}
 
 .status-row{
-  display:flex; align-items:center; gap:8px;
-  background:#c7b79a;
-  color:#1a140c;
-  border-radius:8px;
-  margin:10px -10px 0;
-  padding:8px 12px;
-  font-size:12px;
-  border:1px solid #aa9979;
+  display:flex;align-items:center;gap:10px;
+  background:var(--pill);
+  color:#1b160f;
+  border:1px solid var(--pill-border);
+  border-radius:10px;
+  margin:12px -6px -2px;
+  padding:10px 12px;
+  font-size:13px;
 }
-.pill{ font-weight:700 }
-.dot{ opacity:.7 }
+.pill{font-weight:800}
+.dot{opacity:.7}
 
-.person{ margin-top:12px; position:relative; display:flex; align-items:center; justify-content:space-between; }
-.person-name{ font-size:20px; line-height:1.05 }
+.person{margin-top:12px;display:flex;align-items:center;justify-content:space-between}
+.person-name{font-size:22px;line-height:1.06}
 .fab{
-  width:40px; height:40px; border-radius:50%;
-  background:var(--accent); color:#fff; border:none; font-size:24px;
-  display:flex; align-items:center; justify-content:center;
-  box-shadow: 0 4px 10px rgba(0,0,0,.15);
+  width:48px;height:48px;border-radius:50%;
+  background:var(--accent);color:white;border:none;font-size:26px;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 6px 14px rgba(0,0,0,.2);
 }
 
-.safe{ text-align:center; margin:16px 0 0; color:var(--muted); font-size:12px }
+.safe{text-align:center;margin:18px 0 0;color:var(--muted);font-size:13px}
