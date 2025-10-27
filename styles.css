@@ -1,0 +1,75 @@
+/* Minimal mobile-only layout styled to match the screenshot */
+:root{
+  --bg:#e8e2d2;
+  --fg:#1f1b16;
+  --muted:#4a3f2f;
+  --card:#e6decc;
+  --line:#b8ad97;
+  --accent:#f28a17;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, 'Inter', Arial, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+}
+
+/* Simulated phone canvas to match mobile look even on desktop */
+.phone{
+  min-height:100dvh;
+  max-width:430px;
+  margin:0 auto;
+  padding:12px 12px 24px;
+}
+
+.topbar{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:8px 4px 12px;
+}
+.brand{font-weight:800; font-size:22px; letter-spacing:.3px}
+.brand .plus{color:var(--accent)}
+.menu{width:36px;height:36px;border:none;background:transparent;padding:0;display:grid;gap:4px}
+.menu span{display:block;height:2px;background:var(--fg);border-radius:2px}
+
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:14px;
+  box-shadow: 0 1px 0 rgba(0,0,0,.05) inset;
+}
+
+.primary{ margin-top:4px; }
+.title-row{ display:flex; align-items:flex-start; gap:8px; }
+h1{font-size:24px; line-height:1.05; margin:0 0 6px; font-weight:800}
+.shield{ margin-left:auto; font-size:22px }
+
+.kv{ display:grid; grid-template-columns: 1fr auto; gap:6px 14px; margin:8px 0; }
+.k{ color: var(--muted); font-size:13px }
+.v{ font-size:14px }
+
+.status-row{
+  display:flex; align-items:center; gap:8px;
+  background:#c7b79a;
+  color:#1a140c;
+  border-radius:8px;
+  margin:10px -10px 0;
+  padding:8px 12px;
+  font-size:12px;
+  border:1px solid #aa9979;
+}
+.pill{ font-weight:700 }
+.dot{ opacity:.7 }
+
+.person{ margin-top:12px; position:relative; display:flex; align-items:center; justify-content:space-between; }
+.person-name{ font-size:20px; line-height:1.05 }
+.fab{
+  width:40px; height:40px; border-radius:50%;
+  background:var(--accent); color:#fff; border:none; font-size:24px;
+  display:flex; align-items:center; justify-content:center;
+  box-shadow: 0 4px 10px rgba(0,0,0,.15);
+}
+
+.safe{ text-align:center; margin:16px 0 0; color:var(--muted); font-size:12px }
