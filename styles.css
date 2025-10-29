@@ -25,7 +25,7 @@ body{
   min-height:100dvh;
   max-width:430px;
   margin:0 auto;
-  padding:48px 12px 24px;
+  padding:72px 12px 24px;
 }
 
 .topbar{
@@ -35,7 +35,7 @@ body{
 
 .brand{
   font-weight: 700;
-  font-size: 22px;
+  font-size: 28px;
   letter-spacing: -0.01em;
   line-height: 1.1;
   position: relative;
@@ -43,8 +43,8 @@ body{
 .brand .plus{
   color:var(--accent);
   position: absolute;
-  top: -5px;
-  right: -14px;
+  top: -6px;
+  right: -18px;
 }
 .menu{
   width:24px;
@@ -68,7 +68,7 @@ body{
   border-radius:14px;
   padding:14px;
   box-shadow: 0 1px 0 rgba(0,0,0,.05) inset;
-  height: 85vh;
+  height: 600px;
 }
 
 .primary{
@@ -80,7 +80,7 @@ body{
   gap:8px;
 }
 h1 {
-  font-size: 26px;
+  font-size: 32px;
   line-height: 1.05;
   margin: 0 0 6px;
 }
@@ -99,23 +99,41 @@ h1 {
 }
 .k{
   color: #636250;
-  font-size:13px;
+  font-size:15px;
   font-weight:700;
 }
 .v{
-  font-size:14px;
-  font-weight:700;
+  font-size:17px;
+  font-weight:400;
 }
 
 .status-row {
-  display: flex;
-  gap: 10px;
   background: #674618;
   color: #D5D2BF;
-  margin: 140px -14px 0;
+  margin: 160px -14px 0;
   padding: 10px 14px;
-  font-size: 12px;
+  font-size: 16px;
   font-weight:700;
+  position: relative;
+  overflow: hidden;
+}
+.status-row .marquee{
+  white-space: nowrap;
+}
+.status-row .marquee__track{
+  display:flex;
+  width:max-content;
+  animation: marquee-left 18s linear infinite;
+}
+.status-row .marquee__group{
+  display:flex;
+  align-items:center;
+  gap: 24px;
+  padding-right:24px;
+}
+@keyframes marquee-left{
+  0%{ transform: translateX(0); }
+  100%{ transform: translateX(-50%); }
 }
 .dot{
   opacity:.7;
@@ -129,7 +147,7 @@ h1 {
   justify-content:space-between;
 }
 .person-name{
-  font-size:24px;
+  font-size:30px;
   line-height:1.06;
   font-weight:700;
 }
@@ -145,7 +163,7 @@ h1 {
   align-items:center; 
   justify-content:center;
   box-shadow: 0 4px 10px rgba(0,0,0,.15);
-  margin-top: 28px;
+  margin-top: 44px;
 }
 
 .safe{
@@ -153,4 +171,7 @@ h1 {
   margin:16px 0 0;
   color:var(--muted);
   font-size:12px;
+}
+.sep {
+  margin-right: 50px;
 }
