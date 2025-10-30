@@ -176,3 +176,70 @@ h1 {
 .sep {
   margin-right: 50px;
 }
+
+.error-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background: var(--bg);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.error-content {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+.error-icon {
+  margin-bottom: 40px;
+  margin-top: 25vh;
+  border: 8px solid #91907E;
+  padding: 20px;
+  border-radius: 50%;
+}
+.error-icon img {
+  width: 120px;
+  height: 120px;
+  display: block;
+}
+.error-title {
+  font-size: 26px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 14px;
+}
+.error-msg {
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 56vh;
+  margin-top: 0;
+  text-align: center;
+}
+.error-btn {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 34px;
+  margin: 0 auto;
+  width: 88%;
+  max-width: 370px;
+  padding: 18px 0 14px 0;
+  background: var(--accent);
+  color: #000;
+  border: none;
+  border-radius: 24px;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  cursor: pointer;
+}
