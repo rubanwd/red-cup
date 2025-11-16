@@ -20,3 +20,18 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  var menu = document.querySelector('.fab');
+  var overlay = document.getElementById('error-overlay');
+  var btn = document.querySelector('.error-btn');
+  if (menu && overlay && btn) {
+    menu.addEventListener('click', function() {
+      overlay.style.display = 'flex';
+      overlay.focus && overlay.focus();
+    });
+    btn.addEventListener('click', function() {
+      overlay.style.display = 'none';
+    });
+  }
+});
