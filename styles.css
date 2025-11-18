@@ -57,7 +57,7 @@ body{
   vertical-align: middle;
   font-size:16px;
   font-weight: 600;
-  color:var(--accent);
+  color:#1f1b16;
 }
 
 .card{
@@ -166,7 +166,7 @@ h1 {
 }
 
 .fab span{
-  margin-top: -15px;
+  margin-top: -12px;
 }
 
 .safe{
