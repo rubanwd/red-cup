@@ -166,7 +166,7 @@ h1 {
 }
 
 .fab span{
-  margin-top: -12px;
+  margin-top: -16px;
 }
 
 .safe{
@@ -244,4 +244,226 @@ h1 {
   letter-spacing: 0.02em;
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
   cursor: pointer;
+}
+
+/* Bottom Sheet Menu */
+.bottom-sheet-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 2000;
+  display: none;
+  align-items: flex-end;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.bottom-sheet-overlay.active {
+  display: flex;
+  opacity: 1;
+}
+
+.bottom-sheet {
+  background: #fff;
+  width: 96%;
+  max-width: 430px;
+  border-radius: 20px;
+  transform: translateY(100%);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+  margin-bottom: 25px;
+}
+
+.bottom-sheet-overlay.active .bottom-sheet {
+  transform: translateY(0);
+}
+
+.bottom-sheet-handle {
+  width: 40px;
+  height: 4px;
+  background: #555;
+  border-radius: 2px;
+  margin: 12px auto 8px;
+}
+
+.bottom-sheet-content {
+  padding: 8px 0 24px;
+}
+
+.bottom-sheet-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  background: transparent;
+  border: none;
+  text-align: left;
+  font-family: 'e-Ukraine', system-ui, -apple-system, Segoe UI, Roboto, 'Inter', Arial, sans-serif;
+  font-size: 17px;
+  color: #1f1b16;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.bottom-sheet-item:hover {
+  background: #f5f5f5;
+}
+
+.bottom-sheet-item:active {
+  background: #e8e8e8;
+}
+
+.bottom-sheet-icon {
+  font-size: 24px;
+  width: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.bottom-sheet-icon.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  font-feature-settings: 'liga';
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+.bottom-sheet-text {
+  flex: 1;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* Document View Sheet */
+.document-view-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 3000;
+  display: none;
+  align-items: flex-end;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding-top: 20px;
+}
+
+.document-view-overlay.active {
+  display: flex;
+  opacity: 1;
+}
+
+.document-view-sheet {
+  background: #d5d2bf;
+  width: 100%;
+  max-width: 430px;
+  border-radius: 20px;
+  transform: translateY(100%);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  max-height: calc(100vh - 20px);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+.document-view-overlay.active .document-view-sheet {
+  transform: translateY(0);
+}
+
+.document-view-handle {
+  width: 40px;
+  height: 4px;
+  background: #555;
+  border-radius: 2px;
+  margin: 12px auto 8px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.document-view-content {
+  padding: 0 12px 24px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.document-view-section {
+  background: #fff;
+  border-radius: 14px;
+  padding: 14px;
+  box-shadow: 0 1px 0 rgba(0,0,0,.05) inset;
+  margin: 10px 0;
+}
+
+.document-view-k {
+  color: #636250;
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.document-view-v {
+  font-size: 17px;
+  font-weight: 400;
+  color: #1f1b16;
+  line-height: 1.4;
+}
+
+.document-view-person-name {
+  font-size: 28px;
+  line-height: 1.06;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.document-view-status-badge {
+  display: inline-block;
+  color: #1f1b16;
+  padding: 6px 0;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.document-view-two-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.document-view-kv {
+  display: flex;
+  flex-direction: column;
+}
+
+.document-view-title {
+  padding: 20px 0;
+}
+
+.document-view-title h1 {
+  font-weight: 500;
+}
+
+.document-view-status {
+  margin: 10px -14px 30px;
 }

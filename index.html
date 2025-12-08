@@ -12,6 +12,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/e-ukraine">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="styles.css">
     <script defer src="app.js"></script>
   </head>
@@ -82,5 +83,164 @@
 
 
     </main>
+
+    <!-- Document View Sheet -->
+    <div id="document-view-overlay" class="document-view-overlay">
+      <div class="document-view-sheet" id="document-view-sheet">
+        <div class="document-view-handle"></div>
+        
+        <div class="document-view-content">
+          <div class="title-row document-view-title">
+            <h1>Військово-<br/>обліковий<br/>документ</h1>
+            <div class="shield" aria-hidden="true"><img src="assets/icons/icon-guard.png" alt="" aria-hidden="true"></div>
+          </div>
+          <div class="status-row document-view-status" aria-live="off">
+            <div class="marquee">
+              <div class="marquee__track">
+                <div class="marquee__group">
+                  <span class="pill">На обліку</span>
+                  <span class="dot">•</span>
+                  <span class="upd">Дані оновлені о 18:42 | 01.11.2025</span>
+                </div>
+                <div class="marquee__group" aria-hidden="true">
+                  <span class="pill">На обліку</span>
+                  <span class="dot">•</span>
+                  <span class="upd">Дані оновлені о 18:42 | 01.11.2025</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Personal Info Section -->
+          <div class="document-view-section">
+            <div class="document-view-person-name">
+              <div>РУБАН СЕРГІЙ</div>
+              <div>Юрійович</div>
+            </div>
+            <div class="document-view-status-badge">На обліку</div>
+            <div class="document-view-two-columns">
+              <div class="document-view-kv">
+                <div class="document-view-k">Дата народження:</div>
+                <div class="document-view-v">11.05.1986</div>
+              </div>
+              <div class="document-view-kv">
+                <div class="document-view-k">РНОКПП:</div>
+                <div class="document-view-v">3290510455</div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Deferment Section -->
+          <div class="document-view-section">
+            <div class="document-view-two-columns">
+              <div class="document-view-kv">
+                <div class="document-view-k">Відстрочка до:</div>
+                <div class="document-view-v">29.04.2026</div>
+              </div>
+              <div class="document-view-kv">
+                <div class="document-view-k">Тип відстрочки:</div>
+                <div class="document-view-v">бронювання</div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- VLK Section -->
+          <div class="document-view-section">
+            <div class="document-view-two-columns">
+              <div class="document-view-kv">
+                <div class="document-view-k">Постанова ВЛК:</div>
+                <div class="document-view-v">Придатний</div>
+              </div>
+              <div class="document-view-kv">
+                <div class="document-view-k">Дата ВЛК:</div>
+                <div class="document-view-v">17.07.2025</div>
+              </div>
+            </div>
+          </div>
+          <div class="document-view-section">
+            <div class="document-view-k">ТЦК та СП:</div>
+            <div class="document-view-v">Харківський районний територіальний центр комплектування та соціальної підтримки</div>
+          </div>
+          <!-- Rank Section -->
+          <div class="document-view-section">
+            <div class="document-view-two-columns">
+              <div class="document-view-kv">
+                <div class="document-view-k">Звання:</div>
+                <div class="document-view-v">Солдат</div>
+              </div>
+              <div class="document-view-kv">
+                <div class="document-view-k">ВОС:</div>
+                <div class="document-view-v">956647</div>
+              </div>
+            </div>
+          </div>
+          <div class="document-view-section">
+            <div class="document-view-k">Категорія обліку:</div>
+            <div class="document-view-v">Військовозобов'язаний</div>
+          </div>
+          <div class="document-view-section">
+            <div class="document-view-k">Будівельних робіт, Робітник підсобний</div>
+            <div class="document-view-v"></div>
+          </div>
+          <div class="document-view-section">
+            <div class="document-view-k">Номер в реєстрі Оберіг:</div>
+            <div class="document-view-v">010520255550311100012</div>
+          </div>
+          <div class="document-view-section">
+            <div class="document-view-k">Телефон:</div>
+            <div class="document-view-v">+380 66 161 5006</div>
+          </div>
+          <div class="document-view-section">
+            <div class="document-view-k">Email:</div>
+            <div class="document-view-v">sruban186@gmail.com</div>
+          </div>
+          <div class="document-view-section">
+            <div class="document-view-k">Адреса проживання:</div>
+            <div class="document-view-v">Україна, Харківська область, с. Циркуни (Харківський р-н), пров. Річний, б. 18</div>
+          </div>
+          <div class="document-view-section">
+            <div class="document-view-k">Дата уточнення даних:</div>
+            <div class="document-view-v">10.07.2025</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Sheet Menu -->
+    <div id="bottom-sheet-overlay" class="bottom-sheet-overlay">
+      <div class="bottom-sheet" id="bottom-sheet">
+        <div class="bottom-sheet-handle"></div>
+        <div class="bottom-sheet-content">
+          <button class="bottom-sheet-item" data-action="view-document">
+            <span class="bottom-sheet-icon material-symbols-outlined">info</span>
+            <span class="bottom-sheet-text">Переглянути документ</span>
+          </button>
+          <button class="bottom-sheet-item" data-action="error">
+            <span class="bottom-sheet-icon material-symbols-outlined">description</span>
+            <span class="bottom-sheet-text">Завантажити PDF</span>
+          </button>
+          <button class="bottom-sheet-item" data-action="error">
+            <span class="bottom-sheet-icon material-symbols-outlined">refresh</span>
+            <span class="bottom-sheet-text">Оновити документ</span>
+          </button>
+          <button class="bottom-sheet-item" data-action="error">
+            <span class="bottom-sheet-icon material-symbols-outlined">add_circle</span>
+            <span class="bottom-sheet-text">Розширені дані з реєстру</span>
+          </button>
+          <button class="bottom-sheet-item" data-action="error">
+            <span class="bottom-sheet-icon material-symbols-outlined">note_add</span>
+            <span class="bottom-sheet-text">Подати запит на відстрочку</span>
+          </button>
+          <button class="bottom-sheet-item" data-action="error">
+            <span class="bottom-sheet-icon material-symbols-outlined">local_hospital</span>
+            <span class="bottom-sheet-text">Направлення на ВЛК</span>
+          </button>
+          <button class="bottom-sheet-item" data-action="error">
+            <span class="bottom-sheet-icon material-symbols-outlined">edit</span>
+            <span class="bottom-sheet-text">Уточнити контактні дані</span>
+          </button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
