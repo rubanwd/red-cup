@@ -130,53 +130,6 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }
     
-    // Swipe down to close
-    var touchStartY = 0;
-    var touchStartTime = 0;
-    var isDragging = false;
-    
-    if (documentViewSheet) {
-      documentViewSheet.addEventListener('touchstart', function(e) {
-        if (documentViewSheet.scrollTop === 0) {
-          touchStartY = e.touches[0].clientY;
-          touchStartTime = Date.now();
-          isDragging = true;
-        }
-      });
-      
-      documentViewSheet.addEventListener('touchmove', function(e) {
-        if (!isDragging || documentViewSheet.scrollTop > 0) {
-          isDragging = false;
-          return;
-        }
-        
-        var touchEndY = e.touches[0].clientY;
-        var diff = touchEndY - touchStartY;
-        
-        // If swiping down from top, allow it
-        if (diff > 0) {
-          e.preventDefault();
-        } else {
-          isDragging = false;
-        }
-      });
-      
-      documentViewSheet.addEventListener('touchend', function(e) {
-        if (!isDragging) return;
-        
-        var touchEndY = e.changedTouches[0].clientY;
-        var diff = touchEndY - touchStartY;
-        var timeDiff = Date.now() - touchStartTime;
-        
-        // Close if swiped down more than 100px or fast swipe (>50px in <300ms)
-        if (diff > 100 || (diff > 50 && timeDiff < 300)) {
-          closeDocumentView();
-        }
-        
-        isDragging = false;
-      });
-    }
-    
     // Close on Escape key
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape' && documentViewOverlay && documentViewOverlay.classList.contains('active')) {
