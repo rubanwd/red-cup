@@ -29,6 +29,7 @@ body{
   padding-bottom: 90px;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .topbar{
@@ -195,7 +196,7 @@ h1 {
 }
 
 .fab span{
-  margin-top: -12px;
+  margin-top: -8px;
 }
 
 .safe{
